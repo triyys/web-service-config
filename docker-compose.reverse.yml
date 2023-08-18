@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  reverse:
+    container_name: reverse
+    hostname: reverse
+    image: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./config/nginx/domain.conf:/etc/nginx/conf.d/domain.conf
+      - ./logs/nginx:/var/log/nginx
