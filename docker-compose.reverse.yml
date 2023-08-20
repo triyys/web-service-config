@@ -10,10 +10,5 @@ services:
       - 443:443
     volumes:
       - ./config/nginx/domain.conf:/etc/nginx/conf.d/domain.conf:ro
-      # - ./config/certbot/www:/var/www/certbot/:ro
       - ./logs/nginx:/var/log/nginx
       - /home/ubuntu/nginx:/etc/ssl:ro
-  # certbot:
-  #   image: certbot/certbot:latest
-  #   volumes:
-  #     - ./config/certbot/www:/var/www/certbot:rw
